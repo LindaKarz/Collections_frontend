@@ -105,7 +105,7 @@ const Create = () => {
             <Button variant='danger' onClick={onClickRemoveImage} className='m-2'>
             Delete
             </Button>
-            <img  src={`http://localhost:4444${image}`} alt='Uploaded' style={{maxWidth: 360}}/>
+            <img  src={`${process.env.REACT_APP_API_URL}${image}`} alt='Uploaded' style={{maxWidth: 360}}/>
           </>
         )}
         <br />
