@@ -21,7 +21,7 @@ const Create = () => {
       const formData = new FormData()
       const file = event.target.files[0]
       formData.append('image', file)
-      const { data } = await axios.post('/upload', formData)
+      const { data } = await axios.post('/uploads', formData)
       setImage(data.url)
     } catch(err) {
       console.warn(err)
@@ -104,7 +104,7 @@ const Create = () => {
             <Button variant='danger' onClick={onClickRemoveImage} className='m-2'>
             Delete
             </Button>
-            <img  src={`${process.env.REACT_APP_API_URL}${image}`} alt='Uploaded' style={{maxWidth: 360}}/>
+            <img  src={`${process.env.REACT_APP_API_URL}${image}`} alt='ed' style={{maxWidth: 360}}/>
           </>
         )}
         <br />
